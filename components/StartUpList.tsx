@@ -1,8 +1,6 @@
+// components/StartupList.tsx
 import React from 'react';
 import Link from 'next/link';
-// import { useRouter } from 'next/router';
-// useRouter();
-
 
 interface StartupListProps {
   startups: {
@@ -11,7 +9,6 @@ interface StartupListProps {
     field: string;
     headquarters: string;
     founded: string;
-    // logo: string;
   }[];
 }
 
@@ -29,7 +26,6 @@ const StartupList: React.FC<StartupListProps> = ({ startups }) => {
               <div className="flex items-center justify-center">
                 <img
                   className="h-16 w-16 rounded-full object-cover"
-                //   src={startup.logo || '/images/default.png'}
                   src={'/image/default.png'}
                   alt={startup.name}
                   onError={(e) => {
@@ -46,20 +42,19 @@ const StartupList: React.FC<StartupListProps> = ({ startups }) => {
                 </div>
               </div>
               <div className="flex justify-end items-center">
-                <button className="text-gray-700 hover:text-yellow-500">
-                  <Link href={`http://localhost:8000/startups/${startup.name}`}><span className="sr-only">Star</span>             
-                  {/* <Link href="/startup-profile"><span className="sr-only">Star</span>              */}
-
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 11l7-7 7 7M5 19l7-7 7 7"
-                    />
-                  </svg>
-                  </Link> 
-                </button>
+                <Link href={`/startups/${encodeURIComponent(startup.name)}`}>
+                  <button className="text-gray-700 hover:text-yellow-500">
+                    <span className="sr-only">View Details</span>
+                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 11l7-7 7 7M5 19l7-7 7 7"
+                      />
+                    </svg>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
