@@ -1,29 +1,25 @@
 // components/Header.tsx
 import React from 'react';
+import { User } from 'lucide-react';
 
 interface HeaderProps {
   title: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ title }) => {
-  return (
-    <div className="flex items-center bg-white p-4 pb-2 justify-between">
-      <h2 className="text-[#181511] text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pl-12">
-        {title}
-      </h2>
-      <div className="flex w-12 items-center justify-end">
-        <button className="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 bg-transparent text-[#181511] gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
-          <div
-            className="text-[#181511]"
-            data-icon="Gear"
-            data-size="24px"
-            data-weight="regular"
-          >
-          </div>
+const Header: React.FC<HeaderProps> = ({ title }) => (
+  <header className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white p-6 shadow-md">
+    <div className="container mx-auto flex justify-between items-center">
+      <div className="w-24"> {/* Placeholder for balance */}
+        {/* You can add a logo or other content here if needed */}
+      </div>
+      <h1 className="text-3xl font-bold text-center flex-grow">{title}</h1>
+      <div className="w-24 flex justify-end">
+        <button className="p-2 rounded-full hover:bg-yellow-700 transition duration-300">
+          <User size={28} />
         </button>
       </div>
     </div>
-  );
-};
+  </header>
+);
 
 export default Header;
