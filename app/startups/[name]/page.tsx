@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { ArrowUpRight, MapPin, Users, DollarSign, Calendar, Briefcase } from 'lucide-react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
+import { constants } from '../../../constant';
 
 interface FundingStage {
   stage: string;
@@ -184,10 +185,9 @@ const StartupProfile = () => {
             </div>
           )}
 
-          <Link href="/startups">
+          <Link href={constants.paymentlink.TechMentorFund}>
             <button className="w-full bg-yellow-500 text-white py-3 px-6 rounded-lg hover:bg-yellow-600 transition duration-300 flex items-center justify-center text-lg font-semibold">
-              {/* View Other Startup  */}
-              Donote
+              Invest
               <ArrowUpRight className="ml-2 w-5 h-5" />
             </button>
           </Link>
