@@ -9,7 +9,7 @@ interface Alumnus {
 }
 
 async function getAlumni(): Promise<Alumnus[]> {
-  const res = await fetch('http://localhost:8000/alumni');
+  const res = await fetch('https://safari-tech-backend.vercel.app/alumni');
   if (!res.ok) {
     throw new Error('Failed to fetch alumni');
   }

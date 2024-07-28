@@ -20,7 +20,7 @@ const StartupsPage = () => {
     const fetchStartups = async () => {
       setIsLoading(true);
       try {
-        const res = await fetch('http://localhost:8000/startups');
+        const res = await fetch('https://safari-tech-backend.vercel.app/startups');
         if (!res.ok) {
           throw new Error('Failed to fetch startups');
         }

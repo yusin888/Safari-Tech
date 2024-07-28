@@ -25,7 +25,7 @@ const AlumnusDetailsPage = () => {
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch(`http://localhost:8000/alumni/${alumnusName}`);
+        const response = await fetch(`https://safari-tech-backend.vercel.app/alumni/${alumnusName}`);
         if (!response.ok) {
           throw new Error('Failed to fetch alumnus data');
         }

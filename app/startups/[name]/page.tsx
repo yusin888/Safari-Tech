@@ -35,7 +35,7 @@ const StartupProfile = () => {
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch(`http://localhost:8000/startups/${startupName}`);
+        const response = await fetch(`https://safari-tech-backend.vercel.app/startups/${startupName}`);
         if (!response.ok) {
           throw new Error('Failed to fetch startup data');
         }

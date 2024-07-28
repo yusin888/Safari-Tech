@@ -34,7 +34,7 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:8000/investor-analysis')
+    fetch('https://safari-tech-backend.vercel.app/investor-analysis')
       .then(response => response.json())
       .then(setData)
       .catch(console.error)
