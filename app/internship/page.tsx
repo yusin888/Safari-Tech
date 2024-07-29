@@ -18,7 +18,7 @@ const internships: Internship[] = [
     link: "https://www.theforage.com/simulations/jpmorgan/software-engineering-btjx",
     description: "Build an interface with a stock price data feed and visually display data to assist our traders as a Software Engineer at JPMorgan Chase.",
     company: "J.P. Morgan",
-    image: "/image/internship/img1.jpeg"
+    image: "/image/internship/img6.jpg"
   },
   {
     id: 2,
