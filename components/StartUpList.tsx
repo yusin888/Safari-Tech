@@ -1,6 +1,9 @@
 // components/StartupList.tsx
 import React from 'react';
 import Link from 'next/link';
+import Navbar from './Navbar';
+import  Footer from './Footer';
+
 
 interface StartupListProps {
   startups: {
@@ -16,6 +19,7 @@ const StartupList: React.FC<StartupListProps> = ({ startups }) => {
   return (
     <div className="container mx-auto py-12">
       <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-12">Startups in Kenya</h2>
+      <Navbar/>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {startups.map((startup) => (
           <div
@@ -60,6 +64,7 @@ const StartupList: React.FC<StartupListProps> = ({ startups }) => {
           </div>
         ))}
       </div>
+      {/* <Footer/> */}
     </div>
   );
 };

@@ -3,6 +3,10 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { MapPin, Users, DollarSign, Calendar, Briefcase } from 'lucide-react';
+import Navbar from './../../components/Navbar';
+import Footer from './../../components/Footer';
+
+
 
 interface Investor {
   investor: string;
@@ -55,11 +59,12 @@ export default function Dashboard() {
     <div className="min-h-screen bg-white p-4 sm:p-6 lg:p-8">
       <Head>
         <title>Startup Investor Dashboard</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" /> <Navbar></Navbar>
       </Head>
 
       <main className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8 text-gray-800">Startup Investor Dashboard</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">Startup Investor Dashboard</h1>
+        <Navbar/>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {/* Biggest Startup Card */}
@@ -155,6 +160,8 @@ export default function Dashboard() {
               </div>
             ))}
           </div>
+          <Footer />
+
         </div>
       </main>
     </div>

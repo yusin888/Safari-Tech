@@ -1,4 +1,5 @@
 import Navbar from './../../components/Navbar'
+import Footer from './../../components/Footer';
 import React from 'react';
 
 interface Internship {
@@ -103,11 +104,12 @@ const InternshipPage: React.FC = () => {
                 >
                   Apply Now
                 </a>
-              </div>
+              </div>            
             </div>
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

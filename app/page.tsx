@@ -45,8 +45,8 @@ const Home: React.FC = () => {
           <NavButton href="/hubs" icon={MapPin} text="Hubs" active={true} />
           <NavButton href="/funding" icon={DollarSign} text="Funding" />
           <NavButton href="/startups" icon={Rocket} text="Startups" />
-          <NavButton href="/deep-tech" icon={Cpu} text="Deep Tech" />
-          <NavButton href="/alumni" icon={GraduationCap} text="Internship" />
+          <NavButton href="/alumni" icon={Cpu} text="Deep Tech" />
+          <NavButton href="/internship" icon={GraduationCap} text="Internship" />
         </nav>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

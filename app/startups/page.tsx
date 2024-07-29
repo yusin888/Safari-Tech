@@ -2,6 +2,8 @@
 "use client";
 import { useEffect, useState } from 'react';
 import StartupList from '../../components/StartUpList';
+import Footer from './../../components/Footer';
+
 
 interface Startup {
   _id: string;
@@ -55,6 +57,8 @@ const StartupsPage = () => {
   return (
     <div className="container mx-auto p-4">
       <StartupList startups={startups} />
+      <Footer />
+
     </div>
   );
 };
